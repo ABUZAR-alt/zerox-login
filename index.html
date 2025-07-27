@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login | ZEROX Toolkit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f0f0f, #1a1c1f);
+      background-size: 400% 400%;
+      animation: bgMove 12s ease infinite;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @keyframes bgMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 50px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+      max-width: 380px;
+      width: 90%;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+    .btn {
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #000;
+      background: #03e9f4;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #03e9f4, 0 0 20px #03e9f4;
+      transition: all 0.3s ease;
+      margin: 10px 0;
+      display: inline-block;
+      width: 100%;
+      max-width: 280px;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      background-color: #00d4ff;
+      box-shadow: 0 0 20px #00e0ff, 0 0 40px #00e0ff;
+    }
+    .whatsapp-btn {
+      background-color: #25d366;
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 0 12px #25d366;
+    }
+    .whatsapp-btn:hover {
+      background-color: #1ebe5d;
+      box-shadow: 0 0 20px #25d366;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🔐 𝐋𝐨𝐠𝐢𝐧 𝐓𝐨 𝐙𝐄𝐑𝐎𝐗 𝐓𝐨𝐨𝐥𝐤𝐢𝐭
+    <button class="btn" onclick="login()">Login</button>
+    <a href="https://whatsapp.com/channel/0029Vb6YHYNFSAt4222Nl51I" target="_blank" class="btn whatsapp-btn">
+      📲 𝐎𝐮𝐫 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩
+    </a>
+  </div>
+
+  <script>
+    function login() {
+      const encodedKey = "QUJVWkFSIFggWkFSWUFC"; // Base64 for "ABUZAR X ZARYAB"
+      const input = prompt("Enter Login Key:");
+      if (!input) {
+        alert("Please enter a key.");
+        return;
+      }
+      const inputEncoded = btoa(input.trim());
+      if (inputEncoded === encodedKey) {
+        // Correct key - redirect
+        window.location.href = "https://zerox-store.vercel.app/";
+      } else {
+        alert("❌ Incorrect key. Access denied.");
+      }
+    }
+  </script>
+</body>
+</html>
